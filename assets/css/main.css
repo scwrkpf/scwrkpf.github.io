@@ -1,0 +1,119 @@
+/*
+    Theme Name: Portfolio website
+    Author: Shawn Croes
+*/
+
+/************************************
+1. FONTS
+************************************/
+
+/************************************
+2. ROOT
+************************************/
+:root {
+    --light-color: #FBFBFB;
+    --dark-color: #2E2D2C;
+    --base-font: 'Open Sans', sans-serif;
+}
+
+/************************************
+3. DEFAULTS
+************************************/
+* {
+    outline: none;
+    border: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+html {
+    font-size: 10px;
+}
+body {
+    background-color: var(--dark-color);
+    font-family: var(--base-font);
+    color: var(--light-color);
+}
+
+.main-bg {
+    background: url(../img/bg-main-xs-port.jpg);
+    background-size: cover;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+/************************************
+4. GENERIC (re-usable)
+************************************/
+.absolute__full {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.bg__blur:before,
+.bg__blur:after {
+    position: absolute;
+    top: -10px;
+    right:  -10px;
+    bottom:  -10px;
+    left:  -10px;
+    content: '';
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
+    background: inherit;
+    background-size: inherit;
+    overflow: hidden;
+}
+
+/************************************
+5. TEXT
+************************************/
+h1, h2, h3, h4, h5, h6, h7 {
+    font-weight: 700;
+    line-height: 1em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.185rem;
+}
+/************************************
+6. SECTION SPECIFIC
+************************************/
+/* MAIN HEADER */
+body > header {
+    width: 100%;
+    padding: 1.2rem 2rem;
+}
+
+body > header h1 {
+    margin-bottom: 0.025em;
+}
