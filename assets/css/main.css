@@ -63,6 +63,18 @@ body {
     color: var(--light-color);
 }
 
+main {
+    width: 100%;
+    padding: 0 4rem;
+}
+
+main > section {
+    padding-top: 4rem;
+}
+
+img {
+    width: 100%;
+}
 .main-bg {
     background: url(../img/bg-main-xs-port.jpg);
     background-size: cover;
@@ -85,16 +97,16 @@ body {
 .bg__blur:before,
 .bg__blur:after {
     position: absolute;
-    top: -15px;
-    right:  -15px;
-    bottom:  -15px;
-    left:  -15px;
+    top: -50px;
+    right:  -50px;
+    bottom:  -50px;
+    left:  -50px;
     content: '';
-    -webkit-filter: blur(15px);
-    -moz-filter: blur(15px);
-    -ms-filter: blur(15px);
-    filter: blur(15px);
-    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='15');
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='20');
     background: inherit;
     background-size: inherit;
     overflow: hidden;
@@ -109,7 +121,7 @@ body {
 /************************************
 5. TEXT
 ************************************/
-h1, h2, h3, h4, h5, h6, h7 {
+h1, h2, h3, h4, h5, h6, h7, a {
     font-weight: 700;
     line-height: 1em;
     letter-spacing: 0.1em;
@@ -122,6 +134,11 @@ h1 {
 
 h2 {
     font-size: 1.43rem;
+}
+
+a {
+    font-size: 1.43rem;
+    line-height: 3em;
 }
 /************************************
 6. SECTION SPECIFIC
@@ -139,7 +156,7 @@ h2 {
 }
 
 .main-hdr h2 {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.4rem;
 }
 
 .main-hdr > nav {
@@ -147,9 +164,6 @@ h2 {
 }
 
 .main-hdr > nav a {
-    text-transform: uppercase;
-    font-size: 1.43rem;
-    line-height: 3em;
     width: calc(100% / 3);
     float: left;
     border-right: 1px solid var(--light-color-opaque);
@@ -157,4 +171,10 @@ h2 {
 
 .main-hdr > nav li:last-of-type a {
     border-right: none;
+}
+
+/* BIO */
+.bio figure {
+    padding: 2rem;
+    border: 1px solid var(--light-color-opaque);
 }
