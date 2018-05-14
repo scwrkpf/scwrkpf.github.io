@@ -11,8 +11,10 @@
 2. ROOT
 ************************************/
 :root {
-    --light-color: #FBFBFB;
-    --dark-color: #2E2D2C;
+    --light-color: rgba(251,251,251,1);
+    --light-color-opaque: rgba(251,251,251,.3);
+    --dark-color: rgba(46,45,44,1);
+    --dark-color-opaque: rgba(46,45,44,.3);
     --base-font: 'Open Sans', sans-serif;
 }
 
@@ -35,6 +37,16 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: inherit;
 }
 
 html,
@@ -73,19 +85,25 @@ body {
 .bg__blur:before,
 .bg__blur:after {
     position: absolute;
-    top: -10px;
-    right:  -10px;
-    bottom:  -10px;
-    left:  -10px;
+    top: -15px;
+    right:  -15px;
+    bottom:  -15px;
+    left:  -15px;
     content: '';
-    -webkit-filter: blur(10px);
-    -moz-filter: blur(10px);
-    -ms-filter: blur(10px);
-    filter: blur(10px);
-    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='15');
     background: inherit;
     background-size: inherit;
     overflow: hidden;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;  
 }
 
 /************************************
@@ -99,21 +117,44 @@ h1, h2, h3, h4, h5, h6, h7 {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.4rem;
 }
 
 h2 {
-    font-size: 1.185rem;
+    font-size: 1.43rem;
 }
 /************************************
 6. SECTION SPECIFIC
 ************************************/
 /* MAIN HEADER */
-body > header {
+.main-hdr {
     width: 100%;
-    padding: 1.2rem 2rem;
+    padding-top: 1.2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--light-color-opaque);
 }
 
-body > header h1 {
-    margin-bottom: 0.025em;
+.main-hdr h1 {
+    margin-bottom: 0.1em;
+}
+
+.main-hdr h2 {
+    margin-bottom: 1.2rem;
+}
+
+.main-hdr > nav {
+    border-top: 1px solid var(--light-color-opaque);
+}
+
+.main-hdr > nav a {
+    text-transform: uppercase;
+    font-size: 1.43rem;
+    line-height: 3em;
+    width: calc(100% / 3);
+    float: left;
+    border-right: 1px solid var(--light-color-opaque);
+}
+
+.main-hdr > nav li:last-of-type a {
+    border-right: none;
 }
