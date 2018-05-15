@@ -65,11 +65,15 @@ body {
 
 main {
     width: 100%;
-    padding: 0 4rem;
+    padding: 0 4rem 4rem;
 }
 
 main > section {
     padding-top: 4rem;
+}
+
+main > section > * ~ * {
+    margin-top: 2rem;
 }
 
 img {
@@ -125,6 +129,23 @@ img {
     clear: both;  
 }
 
+.button {
+    display: inline-block;
+    border: 1px solid var(--light-color-opaque);
+    padding-right: 1.25em;
+    padding-left: 1.25em;
+}
+
+.button.pdf:before {
+    content: 'PDF';
+    font-weight: 400;
+    border-right: 1px solid var(--light-color-opaque);
+    border-left: 1px solid var(--light-color-opaque);
+    padding: 0 0.3em;
+    margin-right: 1em;
+}
+
+
 /************************************
 5. TEXT
 ************************************/
@@ -140,6 +161,10 @@ h1 {
 }
 
 h2 {
+    font-size: 1.43rem;
+}
+
+h3 {
     font-size: 1.225rem;
 }
 
@@ -148,15 +173,12 @@ p {
     line-height: 1.75em;
 }
 
-* ~ p {
-    margin-top: 2rem;
-}
-
 a {
     font-size: 1.43rem;
     line-height: 3em;
     padding-top: 0.1em;
 }
+
 /************************************
 6. SECTION SPECIFIC
 ************************************/
@@ -172,7 +194,7 @@ a {
     margin-bottom: 0.1em;
 }
 
-.main-hdr h2 {
+.main-hdr h3 {
     font-weight: 400;
     margin-bottom: 1.8rem;
 }
@@ -195,4 +217,48 @@ a {
 .bio figure {
     padding: 2rem;
     border: 1px solid var(--light-color-opaque);
+}
+
+/* CV */
+.cv .timeline {
+    position: relative;
+    padding-left: 2rem;
+    font-size: 1.2rem;
+}
+
+.cv .timeline > * ~ * {
+    margin-top: 3rem;
+}
+
+.cv .timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    background-color: var(--light-color-opaque);
+}
+
+.cv .timeline > div > * ~ * {
+    margin-top: 1rem;
+}
+
+.cv .timeline span {
+    position: relative;
+    padding: 0.75em 0;
+}
+
+.cv .timeline span::after {
+    content: '';
+    position: absolute;
+    left: -1.9rem;
+    right: -1.9rem;
+    bottom: 0;
+    height: 1px;
+    background-color: var(--light-color-opaque);
+}
+
+.cv .timeline h3 {
+    margin-top: 2.5rem;
 }
