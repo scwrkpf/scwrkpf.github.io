@@ -84,7 +84,6 @@ img {
     background-size: cover;
     overflow: hidden;
     z-index: -1;
-    background-attachment: fixed;
 }
 
 
@@ -180,6 +179,32 @@ a {
     padding-top: 0.1em;
 }
 
+.bold {
+    font-weight: 700;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.spaced {
+    letter-spacing: 0.1em;
+}
+
+main > section > * ~ h2 {
+    margin-top: 6rem;     
+}
+
+main > section ul > li {
+    font-size: 1.3rem;
+    line-height: 1.75em;
+}
+
+main > section ul > li ~ li {
+    margin-top: 1rem;
+}
+
+
 /************************************
 6. SECTION SPECIFIC
 ************************************/
@@ -219,6 +244,7 @@ a {
     padding: 2rem;
     border: 1px solid var(--light-color-opaque);
 }
+
 
 /* CV */
 .cv .timeline {
@@ -282,14 +308,4 @@ a {
 
 .cv .timeline.edu h4:before {
     content: 'SCHOOL';
-}
-
-.cv .timeline li {
-    position: relative;
-    padding-left: 1em;
-    line-height: 1.75em;
-}
-
-.cv .timeline li ~ li {
-    margin-top: 1rem;
 }
