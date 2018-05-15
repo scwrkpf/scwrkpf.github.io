@@ -76,7 +76,7 @@ img {
     width: 100%;
 }
 .main-bg {
-    background: url(../img/melanie-magdalena-340093-unsplash.jpg);
+    background: url(../img/bg-main-xs-port.jpg);
     background-size: cover;
     overflow: hidden;
     z-index: -1;
@@ -86,8 +86,15 @@ img {
 /************************************
 4. GENERIC (re-usable)
 ************************************/
-.absolute__full {
+.fixed {
+    position: fixed;
+}
+
+.absolute {
     position: absolute;
+}
+
+.positioned__full {
     top: 0;
     right: 0;
     bottom: 0;
@@ -134,6 +141,15 @@ h1 {
 
 h2 {
     font-size: 1.225rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.75em;
+}
+
+* ~ p {
+    margin-top: 2rem;
 }
 
 a {
