@@ -84,6 +84,7 @@ img {
     background-size: cover;
     overflow: hidden;
     z-index: -1;
+    background-attachment: fixed;
 }
 
 
@@ -169,7 +170,7 @@ h3 {
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.75em;
 }
 
@@ -223,11 +224,11 @@ a {
 .cv .timeline {
     position: relative;
     padding-left: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .cv .timeline > * ~ * {
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 
 .cv .timeline:before {
@@ -249,7 +250,7 @@ a {
     padding: 0.75em 0;
 }
 
-.cv .timeline span::after {
+.cv .timeline span:after {
     content: '';
     position: absolute;
     left: -1.9rem;
@@ -261,4 +262,34 @@ a {
 
 .cv .timeline h3 {
     margin-top: 2.5rem;
+    line-height: 1.25em;
+}
+
+.cv .timeline h4 {
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.5em;
+}
+
+.cv .timeline h4:before {
+    content: 'BEDRIJF';
+    font-weight: 400;
+    border-right: 1px solid var(--light-color-opaque);
+    border-left: 1px solid var(--light-color-opaque);
+    padding: 0 0.3em;
+    margin-right: 0.5em;
+}
+
+.cv .timeline.edu h4:before {
+    content: 'SCHOOL';
+}
+
+.cv .timeline li {
+    position: relative;
+    padding-left: 1em;
+    line-height: 1.75em;
+}
+
+.cv .timeline li ~ li {
+    margin-top: 1rem;
 }
