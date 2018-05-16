@@ -11,9 +11,15 @@
         background: url(../img/bg-main-s-port.jpg);
         background-size: cover;
     }
-        /* MAIN HEADER */
+    main > section {
+        padding-top: 5rem;
+    }
+    main > section > * ~ * {
+        margin-top: 3rem;
+    }
+    /* MAIN HEADER */
     .main-hdr {
-        padding: 1.9rem 4rem;
+        padding: 1.9rem 0;
         text-align: left;
     }
     .main-hdr > div > h1,
@@ -47,9 +53,14 @@
     .main-hdr > div > nav li:last-of-type a {
         border-right: 1px solid var(--light-color-opaque);
     }
-            /* WORK */
+    /* BIO */
+    .bio figure {
+        max-width: 295px;
+    }
+    /* WORK */
     main > .work > figure {
         float: left;
+        width: calc(50% - (40px / 2));
     }
     main > .work > figure:nth-of-type(2n + 2) {
         margin-left: 4rem;
@@ -65,7 +76,18 @@
         background: url(../img/bg-main-xl.jpg);
         background-size: cover;
     }
+    /* BIO */
+    .bio figure {
+        float: left;
+        margin-right: 6rem;
+    }
+    .bio p:first-of-type {
+        padding-top: 1rem;
+    }
     /* WORK */
+    main > .work > figure {
+        width: calc((100% / 3) - (80px / 3));
+    }    
     main > .work > figure:nth-of-type(2n + 2) {
         margin-left: 0;
     }

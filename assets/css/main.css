@@ -12,9 +12,10 @@
 ************************************/
 :root {
     --light-color: rgba(251,251,251,1);
-    --light-color-opaque: rgba(251,251,251,.3);
+    --light-color-opaque: rgba(251,251,251,.1);
     --dark-color: rgba(46,45,44,1);
     --dark-color-opaque: rgba(46,45,44,.3);
+    --dark-purple: rgba(25,17,49,1);
     --base-font: 'Open Sans', sans-serif;
 }
 
@@ -58,7 +59,7 @@ html {
     font-size: 10px;
 }
 body {
-    background-color: var(--dark-color);
+    background-color: var(--dark-purple);
     font-family: var(--base-font);
     color: var(--light-color);
 }
@@ -81,7 +82,6 @@ main > section > * ~ * {
 figure {
     padding: 2rem;
     border: 1px solid var(--light-color-opaque);
-    max-width: 295px;
 }
 
 img {
@@ -93,10 +93,16 @@ figcaption {
 }
 
 .main-bg {
+    opacity: 0;
     background: url(../img/bg-main-xs-port.jpg);
     background-size: cover;
     overflow: hidden;
     z-index: -1;
+    animation-name: fadeInBg;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
 
 
@@ -327,4 +333,17 @@ main > section ul > li ~ li {
 /* WORK */
 main > .work > * ~ * {
     margin-top: 4rem;
+}
+
+/************************************
+7. ANIMATION
+************************************/
+@keyframes fadeToPurple {
+    to {
+        background-color: var(--dark-purple);
+    }
+}@keyframes fadeInBg {
+    to {
+        opacity: 1;
+    }
 }
