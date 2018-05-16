@@ -91,6 +91,7 @@ img {
 figcaption {
     margin-top: 2rem;
 }
+
 .main-bg {
     background: url(../img/bg-main-xs-port.jpg);
     background-size: cover;
@@ -102,6 +103,10 @@ figcaption {
 /************************************
 4. GENERIC (re-usable)
 ************************************/
+.max-width-container {
+    margin: auto;
+}
+
 .fixed {
     position: fixed;
 }
@@ -244,17 +249,17 @@ main > section ul > li ~ li {
     margin-bottom: 1.8rem;
 }
 
-.main-hdr > nav {
+.main-hdr > div > nav {
     border-top: 1px solid var(--light-color-opaque);
 }
 
-.main-hdr > nav a {
+.main-hdr > div > nav a {
     width: calc(100% / 3);
     float: left;
     border-right: 1px solid var(--light-color-opaque);
 }
 
-.main-hdr > nav li:last-of-type a {
+.main-hdr > div > nav li:last-of-type a {
     border-right: none;
 }
 

@@ -1,19 +1,69 @@
 @media only screen and (min-width: 710px) {
-    main {
+    /* DEFAULTS */
+    main,
+    .max-width-container {
         max-width: 710px;
     }
-    /* WORK */
+    .max-width-container {
+        padding: 0 4rem;
+    }
+    .main-bg {
+        background: url(../img/bg-main-s-port.jpg);
+        background-size: cover;
+    }
+        /* MAIN HEADER */
+    .main-hdr {
+        padding: 1.9rem 4rem;
+        text-align: left;
+    }
+    .main-hdr > div > h1,
+    .main-hdr > div > h3 {
+        float: left;
+    }
+    .main-hdr > div > h3 {
+        clear: left;
+        margin-bottom: 0;
+    }
+    .main-hdr > div > nav {
+        float: right;
+        border-top: none;
+        width: calc(100% - 21rem);
+        margin-top: -2.5rem;
+        text-align: right;
+    } 
+    .main-hdr > div > nav li {
+        display: inline;
+    }
+    .main-hdr > div > nav a {
+        position: relative;
+        width: auto;
+        float: none;
+        padding: 0.5rem 3rem;
+        border-left: 1px solid var(--light-color-opaque);
+    }
+    .main-hdr > div > nav li:nth-of-type(2) a {
+        border: none;
+    }
+    .main-hdr > div > nav li:last-of-type a {
+        border-right: 1px solid var(--light-color-opaque);
+    }
+            /* WORK */
     main > .work > figure {
         float: left;
     }
     main > .work > figure:nth-of-type(2n + 2) {
         margin-left: 4rem;
-    }
+    }    
 }
 
 @media only screen and (min-width: 1045px) {
-    main {
+    main,
+    .max-width-container {
         max-width: 1045px;
+    }
+    .main-bg {
+        background: url(../img/bg-main-xl.jpg);
+        background-size: cover;
     }
     /* WORK */
     main > .work > figure:nth-of-type(2n + 2) {
