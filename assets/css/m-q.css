@@ -1,0 +1,26 @@
+@media only screen and (min-width: 710px) {
+    main {
+        max-width: 710px;
+    }
+    /* WORK */
+    main > .work > figure {
+        float: left;
+    }
+    main > .work > figure:nth-of-type(2n + 2) {
+        margin-left: 4rem;
+    }
+}
+
+@media only screen and (min-width: 1045px) {
+    main {
+        max-width: 1045px;
+    }
+    /* WORK */
+    main > .work > figure:nth-of-type(2n + 2) {
+        margin-left: 0;
+    }
+    main > .work > figure:nth-of-type(3n + 2),
+    main > .work > figure:nth-of-type(3n + 3) {
+        margin-left: 4rem;
+    }
+}

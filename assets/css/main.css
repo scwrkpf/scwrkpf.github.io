@@ -66,6 +66,8 @@ body {
 main {
     width: 100%;
     padding: 0 4rem 4rem;
+    max-width: 375px;
+    margin: 0 auto;
 }
 
 main > section {
@@ -76,8 +78,18 @@ main > section > * ~ * {
     margin-top: 2rem;
 }
 
+figure {
+    padding: 2rem;
+    border: 1px solid var(--light-color-opaque);
+    max-width: 295px;
+}
+
 img {
     width: 100%;
+}
+
+figcaption {
+    margin-top: 2rem;
 }
 .main-bg {
     background: url(../img/bg-main-xs-port.jpg);
@@ -162,10 +174,17 @@ h1 {
 
 h2 {
     font-size: 1.43rem;
+    line-height: 1.25em;
 }
 
 h3 {
     font-size: 1.225rem;
+    line-height: 1.25em;
+}
+
+h4 {
+    font-size: 1rem;
+    line-height: 1.5em;
 }
 
 p {
@@ -239,13 +258,6 @@ main > section ul > li ~ li {
     border-right: none;
 }
 
-/* BIO */
-.bio figure {
-    padding: 2rem;
-    border: 1px solid var(--light-color-opaque);
-}
-
-
 /* CV */
 .cv .timeline {
     position: relative;
@@ -288,13 +300,10 @@ main > section ul > li ~ li {
 
 .cv .timeline h3 {
     margin-top: 2.5rem;
-    line-height: 1.25em;
 }
 
 .cv .timeline h4 {
     position: relative;
-    font-size: 1rem;
-    line-height: 1.5em;
 }
 
 .cv .timeline h4:before {
@@ -308,4 +317,9 @@ main > section ul > li ~ li {
 
 .cv .timeline.edu h4:before {
     content: 'SCHOOL';
+}
+
+/* WORK */
+main > .work > * ~ * {
+    margin-top: 4rem;
 }
