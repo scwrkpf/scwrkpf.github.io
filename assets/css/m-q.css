@@ -95,4 +95,14 @@
     main > .work > figure:nth-of-type(3n + 3) {
         margin-left: 4rem;
     }
+    /* WORK-DETAIL */
+    main > .work-detail > figure {
+        float: left;
+        width: calc(100% - (300px + 4rem));
+    }
+    main > .work-detail > aside {
+        float: left;
+        width: 300px;
+        margin-left: 4rem;
+    }
 }

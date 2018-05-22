@@ -357,12 +357,38 @@ main > .work-detail > h1 {
     line-height: 1.25em;
 }
 
-.work-detail aside p {
+.work-detail aside ul {
     margin-top: 1rem;
 }
 
+.work-detail aside li {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.work-detail aside li:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3rem;
+    text-align: center;
+    content: '»';
+    line-height: 1.65em;
+}
+
+.work-detail aside p,
 .work-detail aside .button {
     margin-top: 2rem;
+}
+
+.work-detail .button.prev {
+    float: left;
+    margin-top: 4rem;
+}
+
+.work-detail .button.next {
+    float: right;
+    margin-top: 4rem;
 }
 
 /************************************
