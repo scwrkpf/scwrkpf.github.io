@@ -159,7 +159,8 @@ figcaption {
     padding-left: 1.25em;
 }
 
-.button.pdf:before {
+.button.pdf:before,
+.button.site:before {
     content: 'PDF';
     font-weight: 400;
     border-right: 1px solid var(--light-color-opaque);
@@ -168,6 +169,13 @@ figcaption {
     margin-right: 1em;
 }
 
+.button.pdf:before {
+    content: 'PDF';
+}
+
+.button.site:before {
+    content: 'WEBSITE';
+}
 
 /************************************
 5. TEXT
@@ -344,6 +352,11 @@ main > .work > figure > a {
     letter-spacing: unset;
     text-transform: unset;
 }
+/* WORK DETAIL */
+main > .work-detail > h1 {
+    line-height: 1.25em;
+}
+
 /************************************
 7. ANIMATION
 ************************************/
