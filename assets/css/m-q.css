@@ -22,11 +22,11 @@
         padding: 1.9rem 0;
         text-align: left;
     }
-    .main-hdr > div > h1,
-    .main-hdr > div > h3 {
+    .main-hdr > div > a > h1,
+    .main-hdr > div > a > h3 {
         float: left;
     }
-    .main-hdr > div > h3 {
+    .main-hdr > div > a > h3 {
         clear: left;
         margin-bottom: 0;
     }
