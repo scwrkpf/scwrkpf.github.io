@@ -357,6 +357,14 @@ main > .work-detail > h1 {
     line-height: 1.25em;
 }
 
+.work-detail aside p {
+    margin-top: 1rem;
+}
+
+.work-detail aside .button {
+    margin-top: 2rem;
+}
+
 /************************************
 7. ANIMATION
 ************************************/
