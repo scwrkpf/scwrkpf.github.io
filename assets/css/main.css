@@ -377,8 +377,10 @@ main > .work-detail > h1 {
 }
 
 .work-detail aside p,
-.work-detail aside .button {
+.work-detail aside .button.site {
+    float: left;
     margin-top: 2rem;
+    clear: both;
 }
 
 .work-detail .button.prev, 
@@ -387,9 +389,9 @@ main > .work-detail > h1 {
     font-size: 1.2rem;
 }
 .work-detail .button.prev {
+    clear: left;
     float: left;
 }
-
 .work-detail .button.next {
     float: right;
 }

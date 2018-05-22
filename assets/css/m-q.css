@@ -105,4 +105,8 @@
         width: 300px;
         margin-left: 4rem;
     }
-}
+    .work-detail .button.next {
+        float: left;
+        margin-left: 0.5rem;
+    }
+    }
