@@ -352,6 +352,7 @@ main > .work > figure > a {
     letter-spacing: unset;
     text-transform: unset;
 }
+
 /* WORK DETAIL */
 main > .work-detail > h1 {
     line-height: 1.25em;
