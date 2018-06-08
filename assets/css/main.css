@@ -103,6 +103,7 @@ figcaption {
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
+    height: 100vh;
 }
 
 
