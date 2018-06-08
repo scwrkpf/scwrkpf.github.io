@@ -135,8 +135,9 @@ figcaption {
     position: absolute;
     top: -50px;
     right:  -50px;
-    bottom:  -50px;
+    bottom:  auto;
     left:  -50px;
+    height: 100vh;
     content: '';
     -webkit-filter: blur(20px);
     -moz-filter: blur(20px);
