@@ -16,6 +16,7 @@
     --dark-color: rgba(46,45,44,1);
     --dark-color-opaque: rgba(46,45,44,.3);
     --dark-purple: rgba(25,17,49,1);
+    --green-accent: rgba(32,178,170,1);
     --base-font: 'Open Sans', sans-serif;
 }
 
@@ -409,16 +410,7 @@ main > .work-detail > h1 {
 7. INTERACTION
 ************************************/
 .main-hdr > div > nav a.active {
-    position: relative;
-}
-.main-hdr > div > nav a.active::before {
-    position: absolute;
-    content: '';
-    background-color: rgba(255,255,255,0.06);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    color: var(--green-accent);
 }
 
 @keyframes fadeToPurple {
