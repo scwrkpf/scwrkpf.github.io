@@ -17,6 +17,13 @@
     main > section > * ~ * {
         margin-top: 3rem;
     }
+    /* TEXT */
+    p {
+        font-size: 1.4rem;
+    }
+    main > section ul > li {
+        font-size: 1.4rem;
+    }
     /* MAIN HEADER */
     .main-hdr {
         padding: 1.9rem 0;
@@ -53,9 +60,26 @@
     .main-hdr > div > nav li:last-of-type a {
         border-right: 1px solid var(--light-color-opaque);
     }
-    /* BIO */
+    /* CV */
+    .cv h2 {
+        font-size: 1.6rem;
+    }
+    .cv .timeline {
+        font-size: 1.4rem;
+    }    
+    .cv .timeline > * ~ * {
+        margin-top: 6rem;
+    }
+    .cv .timeline h3 {
+        font-size: 1.4rem;
+    }
+    .cv .timeline h4 {
+        font-size: 1.1rem;
+    }
+    
+        /* BIO */
     .bio figure {
-        max-width: 295px;
+        max-width: 400px;
     }
     /* WORK */
     main > .work > figure {
@@ -96,7 +120,7 @@
         margin-left: 4rem;
     }
     /* WORK-DETAIL */
-    main > .work-detail > figure {
+    main > .work-detail > a > figure {
         float: left;
         width: calc(100% - (300px + 4rem));
     }

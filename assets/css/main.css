@@ -354,6 +354,11 @@ main > .work > figure > a {
 }
 
 /* WORK DETAIL */
+main > .work-detail > a {
+    display: block;
+    line-height: unset;
+}
+
 main > .work-detail > h1 {
     line-height: 1.25em;
 }
