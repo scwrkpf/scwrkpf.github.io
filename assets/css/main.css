@@ -406,13 +406,28 @@ main > .work-detail > h1 {
 }
 
 /************************************
-7. ANIMATION
+7. INTERACTION
 ************************************/
+.main-hdr > div > nav a.active {
+    position: relative;
+}
+.main-hdr > div > nav a.active::before {
+    position: absolute;
+    content: '';
+    background-color: rgba(255,255,255,0.06);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 @keyframes fadeToPurple {
     to {
         background-color: var(--dark-purple);
     }
-}@keyframes fadeInBg {
+}
+
+@keyframes fadeInBg {
     to {
         opacity: 1;
     }
