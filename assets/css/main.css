@@ -63,6 +63,7 @@ body {
     background-color: var(--dark-purple);
     font-family: var(--base-font);
     color: var(--light-color);
+    padding-top: 12rem;
 }
 
 main {
@@ -252,6 +253,8 @@ main > section ul > li ~ li {
 ************************************/
 /* MAIN HEADER */
 .main-hdr {
+    position: fixed;
+    top: 0;
     width: 100%;
     padding-top: 1.9rem;
     text-align: center;
