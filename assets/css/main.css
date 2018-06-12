@@ -280,7 +280,14 @@ main > section ul > li ~ li {
 .main-hdr > div > nav li:last-of-type a {
     border-right: none;
 }
-
+/* BIO */
+.bio ul li {
+    float: left;
+    margin-top: 0;
+}
+.bio ul li ~ li {
+    margin-left: 1rem;
+}
 /* CV */
 .cv .timeline {
     position: relative;

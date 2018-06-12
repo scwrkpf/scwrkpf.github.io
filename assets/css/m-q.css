@@ -109,6 +109,9 @@
     .bio p:first-of-type {
         padding-top: 1rem;
     }
+    .bio ul {
+        padding-left: 46rem;
+    }
     /* WORK */
     main > .work > figure {
         width: calc((100% / 3) - (80px / 3));
