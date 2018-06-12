@@ -16,6 +16,7 @@
     --dark-color: rgba(46,45,44,1);
     --dark-color-opaque: rgba(46,45,44,.3);
     --dark-purple: rgba(25,17,49,1);
+    --green-accent: rgba(32,178,170,1);
     --base-font: 'Open Sans', sans-serif;
 }
 
@@ -93,6 +94,8 @@ figcaption {
 }
 
 .main-bg {
+    bottom: auto !important;
+    height: 100vh;
     opacity: 0;
     background: url(../img/bg-main-xs-port.jpg);
     background-size: cover;
@@ -133,8 +136,9 @@ figcaption {
     position: absolute;
     top: -50px;
     right:  -50px;
-    bottom:  -50px;
+    bottom:  auto;
     left:  -50px;
+    height: calc(100vh + 100px);
     content: '';
     -webkit-filter: blur(20px);
     -moz-filter: blur(20px);
@@ -403,13 +407,19 @@ main > .work-detail > h1 {
 }
 
 /************************************
-7. ANIMATION
+7. INTERACTION
 ************************************/
+.main-hdr > div > nav a.active {
+    color: var(--green-accent);
+}
+
 @keyframes fadeToPurple {
     to {
         background-color: var(--dark-purple);
     }
-}@keyframes fadeInBg {
+}
+
+@keyframes fadeInBg {
     to {
         opacity: 1;
     }
