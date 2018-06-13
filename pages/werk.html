@@ -14,6 +14,7 @@
 <body>
     <div class="main-bg bg__blur fixed positioned__full">&nbsp;</div>
     <header class="main-hdr clearfix">
+        <div class="main-bg bg__blur absolute positioned__full">&nbsp;</div>
         <div class="max-width-container">
             <a href="../index.html">
                 <h1>Shawn Croes</h1>
@@ -30,8 +31,8 @@
     </header>
     <main>
         <section class="work clearfix">
-            <h1>Portfolio</h1>
-            <figure>
+            <h1 class="viewport-anim">Portfolio</h1>
+            <figure class="viewport-anim">
                 <a href="hr.html">
                     <img src="../assets/img/werk/hr.jpg" alt="Shawn Croes | HR bouwt..">
                     <figcaption>
@@ -40,7 +41,7 @@
                     </figcaption>    
                 </a>
             </figure>
-            <figure>
+            <figure class="viewport-anim">
                 <a href="ls.html">
                     <img src="../assets/img/werk/livescope.jpg" alt="Shawn Croes | Livescope">
                     <figcaption>
@@ -49,7 +50,7 @@
                     </figcaption>
                 </a>
             </figure>
-            <figure>
+            <figure class="viewport-anim">
                 <a href="station.html">
                     <img src="../assets/img/werk/station88.jpg" alt="Shawn Croes | Station 88">
                     <figcaption>
@@ -58,7 +59,7 @@
                     </figcaption>
                 </a>
             </figure>
-            <figure>
+            <figure class="viewport-anim">
                 <a href="dl.html">
                     <img src="../assets/img/werk/delonghi.jpg" alt="Shawn Croes | De'Longhi private lease">
                     <figcaption>
@@ -67,7 +68,7 @@
                     </figcaption>
                 </a>
             </figure>
-            <figure>
+            <figure class="viewport-anim">
                 <a href="ceha.html">
                     <img src="../assets/img/werk/ceha.jpg" alt="Shawn Croes | Ceha Europe">
                     <figcaption>
@@ -76,7 +77,7 @@
                     </figcaption>
                 </a>
             </figure>
-            <figure>
+            <figure class="viewport-anim">
                 <a href="doom.html">
                     <img src="../assets/img/werk/doomernik.jpg" alt="Shawn Croes | Doomernik">
                     <figcaption>
@@ -85,7 +86,7 @@
                     </figcaption>
                 </a>
             </figure>
-            <figure>
+            <figure class="viewport-anim">
                 <a href="metro.html">
                     <img src="../assets/img/werk/metro.jpg" alt="Shawn Croes | Restaurant Metro">
                     <figcaption>
@@ -94,7 +95,7 @@
                     </figcaption>
                 </a>
             </figure>
-            <figure>
+            <figure class="viewport-anim">
                 <a href="hh.html">
                     <img src="../assets/img/werk/hamerhark.jpg" alt="Shawn Croes | Hamer &amp; Hark">
                     <figcaption>
@@ -103,7 +104,7 @@
                     </figcaption>
                 </a>
             </figure>
-            <figure>
+            <figure class="viewport-anim">
                 <a href="multis.html">
                     <img src="../assets/img/werk/multis.jpg" alt="Shawn Croes | Multi's">
                     <figcaption>
@@ -112,7 +113,7 @@
                     </figcaption>
                 </a>
             </figure>
-            <figure>
+            <figure class="viewport-anim">
                 <a href="h26.html">
                     <img src="../assets/img/werk/hotel26.jpg" alt="Shawn Croes | Hotel 26">
                     <figcaption>
@@ -121,7 +122,7 @@
                     </figcaption>
                 </a>
             </figure>
-            <figure>
+            <figure class="viewport-anim">
                 <a href="hx.html">
                     <img src="../assets/img/werk/hexspoor.jpg" alt="Shawn Croes | Binderij Hexspoor">
                     <figcaption>
@@ -130,7 +131,7 @@
                     </figcaption>
                 </a>
             </figure>
-            <figure>
+            <figure class="viewport-anim">
                 <a href="otc.html">
                     <img src="../assets/img/werk/otc.jpg" alt="Shawn Croes | Official Travel Company">
                     <figcaption>
@@ -139,7 +140,7 @@
                     </figcaption>
                 </a>
             </figure>
-            <figure>
+            <figure class="viewport-anim">
                 <a href="eve.html">
                     <img src="../assets/img/werk/evemcking.jpg" alt="Shawn Croes | Eve McKing">
                     <figcaption>
@@ -148,7 +149,7 @@
                     </figcaption>
                 </a>
             </figure>
-            <figure>
+            <figure class="viewport-anim">
                 <a href="mk.html">
                     <img src="../assets/img/werk/koppes.jpg" alt="Shawn Croes | Koppes coaching">
                     <figcaption>
@@ -159,64 +160,9 @@
             </figure>
         </section>
     </main>
-    <script>
-        (function(){
-            // Helper functions for handling classes
-            function hasClass(el, cls) {
-                if (el.className.match('(?:^|\\s)'+cls+'(?!\\S)')) { return true; } 
-                }
-            function addClass(el, cls) {
-                if (!el.className.match('(?:^|\\s)'+cls+'(?!\\S)')) { el.className += ' '+cls; } 
-                }
-            function delClass(el, cls) {
-                el.className = el.className.replace(new RegExp('(?:^|\\s)'+cls+'(?!\\S)'),'');
-                }
-    
-            // Function for class toggles based on viewport position
-            // params: element, classes to add, distance from top, unit ('percent' or 'pixels')
-            function elementFromTop(elem, classToAdd, distanceFromTop, unit) {
-                var winY = window.innerHeight || document.documentElement.clientHeight, 
-                elemLength = elem.length, distTop, distPercent, distPixels, distUnit, i;
-                for (i = 0; i < elemLength; ++i) {
-                    distTop = elem[i].getBoundingClientRect().top;
-                    distPercent = Math.round((distTop / winY) * 100);
-                    distPixels = Math.round(distTop);
-                    distUnit = unit == 'percent' ? distPercent : distPixels;
-                    if (distUnit <= distanceFromTop) {
-                        if (!hasClass(elem[i], classToAdd)) { addClass(elem[i], classToAdd); }
-                    } else {
-                        delClass(elem[i], classToAdd);
-                    }
-                }
-            }
-    
-            function topFade(topFadeElems) {
-                for(i = 0; i < topFadeElems.length; i++) {
-                    var distTop = topFadeElems[i].getBoundingClientRect().top;
-                    topFadeElems[i].style.opacity = (distTop / 180) * 1;
-                }
-            }
-    
-            window.addEventListener('scroll', function() {
-                var topFadeElems = document.querySelectorAll('.top--fade');
-                if(topFadeElems.length) {
-                    topFade(topFadeElems);
-                }
-                elementFromTop(document.querySelectorAll('main > section > *'),       'top--fade',       180, 'pixels'); // as top of element hits 120px off top of viewport
-                // elementFromTop(document.querySelectorAll('.amethyst'),     'bg--amethyst bg--fixed',     0, 'pixels');
-                // elementFromTop(document.querySelectorAll('.the-end'),      'color--black',               0, 'pixels');
-                // elementFromTop(document.querySelectorAll('.white'),        'bg--white bg--fixed',      100, 'percent'); // as top of element enters bottom of viewport 
-            }, false);
-    
-            // window.addEventListener('resize', function() {
-            //     elementFromTop(document.querySelectorAll('.orange'),       'bg--orange bg--fixed',       0, 'pixels'); // as top of element hits top of viewport
-            //     elementFromTop(document.querySelectorAll('.amethyst'),     'bg--amethyst bg--fixed',     0, 'pixels');
-            //     elementFromTop(document.querySelectorAll('.the-end'),      'color--black',               0, 'pixels');
-            //     elementFromTop(document.querySelectorAll('.white'),        'bg--white bg--fixed',      100, 'percent'); // as top of element enters bottom of viewport 
-            // }, false);
-        })();
-    </script>
-    
+
+    <script src="../assets/js/main.js"></script>        
+
 </body>
 </html>
 

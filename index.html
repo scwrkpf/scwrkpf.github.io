@@ -14,6 +14,7 @@
 <body>
     <div class="main-bg bg__blur fixed positioned__full">&nbsp;</div>
     <header class="main-hdr clearfix">
+        <div class="main-bg bg__blur absolute positioned__full">&nbsp;</div>
         <div class="max-width-container">
             <a href="#">
                 <h1>Shawn Croes</h1>
@@ -30,23 +31,23 @@
     </header>
     <main>
         <section class="bio clearfix">
-            <h1>Autobiografie</h1>
-            <figure>
+            <h1 class="viewport-anim">Autobiografie</h1>
+            <figure class="viewport-anim">
                 <img src="assets/img/sc-portrait.jpg" alt="Shawn Croes | Designer &amp; Developer">
             </figure>
-            <p>
+            <p class="viewport-anim">
                 Geboren in Nederland en getogen op Aruba. Ooit rondgereisd als kartcoureur, muzikaal geweld verzorgd als hyperactieve drummer en Aruba vertegenwoordigd als voetballer. 
             </p>
-            <p>
+            <p class="viewport-anim">
                 Nu breng ik mijn dagen door tikkend op een toetsenbord, racend op een playseat en vloekend richting Fifa. My life has gone digital, for the most part.
             </p>
-            <p>
+            <p class="viewport-anim">
                 Mijn werk als designer en developer vind ik vooral leuk omdat er altijd nieuwe uitdagingen zijn. Nieuwe inzichten, technieken en probleemstellingen zorgen ervoor dat ik me nooit hoef te vervelen. 
             </p>
-            <p>
+            <p class="viewport-anim">
                 Hierbij vind ik een prettige werkomgeving met fijne collega’s zeer belangrijk. Een team waarin het leuk is om kennis en ideeën uit te wisselen en samen te werken aan nieuwe uitdagingen.
             </p>
-            <ul>
+            <ul class="viewport-anim">
                 <li>
                     <a href="http://www.linkedin.com/in/shawn-croes" class="button" target="_blank">LinkedIn</a>
                 </li>
@@ -57,64 +58,8 @@
         </section>
     </main>
 
-<script>
-    (function(){
-        // Helper functions for handling classes
-        function hasClass(el, cls) {
-            if (el.className.match('(?:^|\\s)'+cls+'(?!\\S)')) { return true; } 
-            }
-        function addClass(el, cls) {
-            if (!el.className.match('(?:^|\\s)'+cls+'(?!\\S)')) { el.className += ' '+cls; } 
-            }
-        function delClass(el, cls) {
-            el.className = el.className.replace(new RegExp('(?:^|\\s)'+cls+'(?!\\S)'),'');
-            }
+    <script src="assets/js/main.js"></script>        
 
-        // Function for class toggles based on viewport position
-	    // params: element, classes to add, distance from top, unit ('percent' or 'pixels')
-        function elementFromTop(elem, classToAdd, distanceFromTop, unit) {
-            var winY = window.innerHeight || document.documentElement.clientHeight, 
-            elemLength = elem.length, distTop, distPercent, distPixels, distUnit, i;
-            for (i = 0; i < elemLength; ++i) {
-                distTop = elem[i].getBoundingClientRect().top;
-                distPercent = Math.round((distTop / winY) * 100);
-                distPixels = Math.round(distTop);
-                distUnit = unit == 'percent' ? distPercent : distPixels;
-                if (distUnit <= distanceFromTop) {
-                    if (!hasClass(elem[i], classToAdd)) { addClass(elem[i], classToAdd); }
-                } else {
-                    delClass(elem[i], classToAdd);
-                }
-            }
-        }
-
-        function topFade(topFadeElems) {
-            for(i = 0; i < topFadeElems.length; i++) {
-                var distTop = topFadeElems[i].getBoundingClientRect().top;
-                topFadeElems[i].style.opacity = (distTop / 180) * 1;
-            }
-        }
-
-        window.addEventListener('scroll', function() {
-            var topFadeElems = document.querySelectorAll('.top--fade');
-            if(topFadeElems.length) {
-                topFade(topFadeElems);
-            }
-            elementFromTop(document.querySelectorAll('main > section > *'),       'top--fade',       180, 'pixels'); // as top of element hits 120px off top of viewport
-            // elementFromTop(document.querySelectorAll('.amethyst'),     'bg--amethyst bg--fixed',     0, 'pixels');
-            // elementFromTop(document.querySelectorAll('.the-end'),      'color--black',               0, 'pixels');
-            // elementFromTop(document.querySelectorAll('.white'),        'bg--white bg--fixed',      100, 'percent'); // as top of element enters bottom of viewport 
-        }, false);
-
-        // window.addEventListener('resize', function() {
-        //     elementFromTop(document.querySelectorAll('.orange'),       'bg--orange bg--fixed',       0, 'pixels'); // as top of element hits top of viewport
-        //     elementFromTop(document.querySelectorAll('.amethyst'),     'bg--amethyst bg--fixed',     0, 'pixels');
-        //     elementFromTop(document.querySelectorAll('.the-end'),      'color--black',               0, 'pixels');
-        //     elementFromTop(document.querySelectorAll('.white'),        'bg--white bg--fixed',      100, 'percent'); // as top of element enters bottom of viewport 
-        // }, false);
-    })();
-</script>
-        
 </body>
 </html>
 
