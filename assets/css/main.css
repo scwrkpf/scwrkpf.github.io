@@ -63,11 +63,12 @@ body {
     background-color: var(--dark-purple);
     font-family: var(--base-font);
     color: var(--light-color);
+    padding-top: 12rem;
 }
 
 main {
     width: 100%;
-    padding: 0 4rem 4rem;
+    padding: 0 4rem 8rem;
     max-width: 375px;
     margin: 0 auto;
 }
@@ -252,10 +253,15 @@ main > section ul > li ~ li {
 ************************************/
 /* MAIN HEADER */
 .main-hdr {
+    position: fixed;
+    top: 0;
     width: 100%;
     padding-top: 1.9rem;
     text-align: center;
     border-bottom: 1px solid var(--light-color-opaque);
+    overflow: hidden;
+    z-index: 99;
+    background-color: var(--dark-purple);
 }
 
 .main-hdr h1 {
@@ -416,6 +422,18 @@ main > .work-detail > h1 {
 /************************************
 7. INTERACTION
 ************************************/
+.viewport-anim {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+    transition: opacity .7s ease;
+}
+
+.bottom--fade--in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: transform .7s ease;
+}
+
 .main-hdr > div > nav a.active {
     color: var(--green-accent);
 }
