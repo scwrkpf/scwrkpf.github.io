@@ -457,8 +457,17 @@ main > .work > figure > a {
     transition: transform .2s ease;
 }
 
+main > .work > figure {
+    transition: all .2s ease;
+}
+
+main > .work > figure:hover {
+    border-color: var(--green-accent);
+}
+
 main > .work > figure > a:hover {
     transform: translateY(-5px);
+    color: var(--green-accent);
 }
 
 main > .work > figure > a:before {
