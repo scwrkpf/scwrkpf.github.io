@@ -439,7 +439,83 @@ main > .work-detail > h1 {
     transition: transform .7s ease;
 }
 
+.main-hdr > div > nav a:hover,
 .main-hdr > div > nav a.active {
+    color: var(--green-accent);
+}
+
+.button {
+    transition: all .2s ease;
+}
+
+.button:hover {
+    border-color: var(--green-accent);
+    color: var(--green-accent);
+}
+
+main > .work > figure > a {
+    transition: transform .2s ease;
+}
+
+main > .work > figure > a:hover {
+    transform: translateY(-5px);
+}
+
+main > .work > figure > a:before {
+    content: '→';
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+main > .work > figure > a:hover:before {
+    opacity: 1;
+}
+
+main > .work-detail > a > figure {
+    position: relative;
+    transition: all .2s ease;
+}
+
+main > .work-detail > a > figure:hover {
+    border-color: var(--green-accent);
+}
+
+main > .work-detail > a > figure:hover:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--dark-purple);
+    text-align: center;
+    opacity: 0.7;
+}
+
+main > .work-detail > a > figure:hover::after {
+    content: 'BEKIJK WEBSITE';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    text-align: center;
+    transform: translateY(-50%);
+    color: var(--green-accent);
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.main-hdr > div > a > h1, 
+.main-hdr > div > a > h3 {
+    transition: color .2s ease;
+}
+
+.main-hdr > div > a:hover > h1, 
+.main-hdr > div > a:hover > h3 {
     color: var(--green-accent);
 }
 
