@@ -35,18 +35,17 @@
         }
     }
 
-    window.addEventListener('scroll', function() {
+    var viewportAnims = function (event) {
         var topFadeElems = document.querySelectorAll('.top--fade--out');
         if(topFadeElems.length) {
             topFade(topFadeElems);
         }
         elementFromTop(document.querySelectorAll('.viewport-anim'),       'top--fade--out',       120, 'pixels'); // as top of element hits 120px off top of viewport
-        elementFromTop(document.querySelectorAll('.viewport-anim'),        'bottom--fade--in',      100, 'percent'); // as top of element enters bottom of viewport 
-    }, false);
+        elementFromTop(document.querySelectorAll('.viewport-anim'),        'bottom--fade--in',      100, 'percent'); // as top of element enters bottom of viewport         
+    }
 
-    // window.addEventListener('resize', function() {
-        // elementFromTop(document.querySelectorAll('.viewport-anim'),       'top--fade--out',       120, 'pixels'); // as top of element hits 120px off top of viewport
-        // elementFromTop(document.querySelectorAll('.viewport-anim'),        'bottom--fade--in',      100, 'percent'); // as top of element enters bottom of viewport 
-    // }, false);
+    window.addEventListener('scroll', viewportAnims, false);
+    window.addEventListener('resize', viewportAnims, false);
+
     elementFromTop(document.querySelectorAll('.viewport-anim'),        'default--fade--in',      100, 'percent'); // as top of element enters bottom of viewport 
 })();
