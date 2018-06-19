@@ -102,7 +102,7 @@ figcaption {
     background-size: cover;
     overflow: hidden;
     z-index: -1;
-    animation-name: fadeInBg;
+    animation-name: fadeIn;
     animation-delay: 1s;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -428,6 +428,11 @@ main > .work-detail > h1 {
     transition: opacity .7s ease;
 }
 
+.default--fade--in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
 .bottom--fade--in {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -444,7 +449,7 @@ main > .work-detail > h1 {
     }
 }
 
-@keyframes fadeInBg {
+@keyframes fadeIn {
     to {
         opacity: 1;
     }

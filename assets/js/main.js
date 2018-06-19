@@ -48,6 +48,5 @@
         // elementFromTop(document.querySelectorAll('.viewport-anim'),       'top--fade--out',       120, 'pixels'); // as top of element hits 120px off top of viewport
         // elementFromTop(document.querySelectorAll('.viewport-anim'),        'bottom--fade--in',      100, 'percent'); // as top of element enters bottom of viewport 
     // }, false);
-    elementFromTop(document.querySelectorAll('.viewport-anim'),       'top--fade--out',       120, 'pixels'); // as top of element hits 120px off top of viewport
-    elementFromTop(document.querySelectorAll('.viewport-anim'),        'bottom--fade--in',      100, 'percent'); // as top of element enters bottom of viewport 
+    elementFromTop(document.querySelectorAll('.viewport-anim'),        'default--fade--in',      100, 'percent'); // as top of element enters bottom of viewport 
 })();
