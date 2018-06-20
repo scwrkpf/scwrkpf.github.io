@@ -360,7 +360,7 @@ main > .work > * ~ * {
     margin-top: 4rem;
 }
 
-main > .work > figure > a {
+main > .work > a {
     display: block;
     font-size: unset;
     line-height: unset;
@@ -453,34 +453,34 @@ main > .work-detail > h1 {
     color: var(--green-accent);
 }
 
-main > .work > figure > a {
+main > .work > a {
     transition: transform .2s ease;
 }
 
-main > .work > figure {
+main > .work > a > figure {
     transition: all .2s ease;
 }
 
-main > .work > figure:hover {
+main > .work > a:hover > figure {
     border-color: var(--green-accent);
 }
 
-main > .work > figure > a:hover {
+main > .work > a:hover {
     transform: translateY(-5px);
     color: var(--green-accent);
 }
 
-main > .work > figure > a:before {
+main > .work > a:before {
     content: '→';
     position: absolute;
-    bottom: 0;
+    bottom: 22px;
     right: 20px;
     font-size: 2em;
     opacity: 0;
     transition: opacity .2s ease;
 }
 
-main > .work > figure > a:hover:before {
+main > .work > a:hover:before {
     opacity: 1;
 }
 
