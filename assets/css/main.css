@@ -11,13 +11,8 @@
 2. ROOT
 ************************************/
 :root {
-    --light-color: rgba(251,251,251,1);
-    --light-color-opaque: rgba(251,251,251,.1);
     --dark-color: rgba(46,45,44,1);
     --dark-color-opaque: rgba(46,45,44,.3);
-    --dark-purple: rgba(25,17,49,1);
-    --green-accent: rgba(32,178,170,1);
-    --base-font: 'Open Sans', sans-serif;
 }
 
 /************************************
@@ -60,13 +55,14 @@ html {
     font-size: 10px;
 }
 body {
-    background-color: var(--dark-purple);
-    font-family: var(--base-font);
-    color: var(--light-color);
+    background-color: rgba(25,17,49,1);
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(251,251,251,1);
     padding-top: 12rem;
 }
 
 main {
+    display: block;
     width: 100%;
     padding: 0 4rem 8rem;
     max-width: 375px;
@@ -83,7 +79,7 @@ main > section > * ~ * {
 
 figure {
     padding: 2rem;
-    border: 1px solid var(--light-color-opaque);
+    border: 1px solid rgba(251,251,251,.1);
 }
 
 img {
@@ -94,7 +90,7 @@ figcaption {
     margin-top: 2rem;
 }
 
-.main-bg {
+.cssfilters .main-bg {
     bottom: auto !important;
     height: 100vh;
     opacity: 0;
@@ -107,6 +103,10 @@ figcaption {
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
+}
+
+.no-cssfilters .main-bg {
+    display: none;
 }
 
 
@@ -132,8 +132,8 @@ figcaption {
     left: 0;
 }
 
-.bg__blur:before,
-.bg__blur:after {
+.cssfilters .bg__blur:before,
+.cssfilters .bg__blur:after {
     position: absolute;
     top: -50px;
     right:  -50px;
@@ -145,7 +145,6 @@ figcaption {
     -moz-filter: blur(20px);
     -ms-filter: blur(20px);
     filter: blur(20px);
-    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='20');
     background: inherit;
     background-size: inherit;
     overflow: hidden;
@@ -159,7 +158,7 @@ figcaption {
 
 .button {
     display: inline-block;
-    border: 1px solid var(--light-color-opaque);
+    border: 1px solid rgba(251,251,251,.1);
     padding-right: 1.25em;
     padding-left: 1.25em;
 }
@@ -168,8 +167,8 @@ figcaption {
 .button.site:before {
     content: 'PDF';
     font-weight: 400;
-    border-right: 1px solid var(--light-color-opaque);
-    border-left: 1px solid var(--light-color-opaque);
+    border-right: 1px solid rgba(251,251,251,.1);
+    border-left: 1px solid rgba(251,251,251,.1);
     padding: 0 0.3em;
     margin-right: 1em;
 }
@@ -258,10 +257,10 @@ main > section ul > li ~ li {
     width: 100%;
     padding-top: 1.9rem;
     text-align: center;
-    border-bottom: 1px solid var(--light-color-opaque);
+    border-bottom: 1px solid rgba(251,251,251,.1);
     overflow: hidden;
     z-index: 99;
-    background-color: var(--dark-purple);
+    background-color: rgba(25,17,49,1);
 }
 
 .main-hdr h1 {
@@ -274,13 +273,13 @@ main > section ul > li ~ li {
 }
 
 .main-hdr > div > nav {
-    border-top: 1px solid var(--light-color-opaque);
+    border-top: 1px solid rgba(251,251,251,.1);
 }
 
 .main-hdr > div > nav a {
     width: calc(100% / 3);
     float: left;
-    border-right: 1px solid var(--light-color-opaque);
+    border-right: 1px solid rgba(251,251,251,.1);
 }
 
 .main-hdr > div > nav li:last-of-type a {
@@ -312,7 +311,7 @@ main > section ul > li ~ li {
     bottom: 0;
     left: 0;
     width: 1px;
-    background-color: var(--light-color-opaque);
+    background-color: rgba(251,251,251,.1);
 }
 
 .cv .timeline > div > * ~ * {
@@ -331,7 +330,7 @@ main > section ul > li ~ li {
     right: -1.9rem;
     bottom: 0;
     height: 1px;
-    background-color: var(--light-color-opaque);
+    background-color: rgba(251,251,251,.1);
 }
 
 .cv .timeline h3 {
@@ -345,8 +344,8 @@ main > section ul > li ~ li {
 .cv .timeline h4:before {
     content: 'BEDRIJF';
     font-weight: 400;
-    border-right: 1px solid var(--light-color-opaque);
-    border-left: 1px solid var(--light-color-opaque);
+    border-right: 1px solid rgba(251,251,251,.1);
+    border-left: 1px solid rgba(251,251,251,.1);
     padding: 0 0.3em;
     margin-right: 0.5em;
 }
@@ -441,7 +440,7 @@ main > .work-detail > h1 {
 
 .main-hdr > div > nav a:hover,
 .main-hdr > div > nav a.active {
-    color: var(--green-accent);
+    color: rgba(32,178,170,1);
 }
 
 .button {
@@ -449,8 +448,8 @@ main > .work-detail > h1 {
 }
 
 .button:hover {
-    border-color: var(--green-accent);
-    color: var(--green-accent);
+    border-color: rgba(32,178,170,1);
+    color: rgba(32,178,170,1);
 }
 
 main > .work > a {
@@ -462,12 +461,12 @@ main > .work > a > figure {
 }
 
 main > .work > a:hover > figure {
-    border-color: var(--green-accent);
+    border-color: rgba(32,178,170,1);
 }
 
 main > .work > a:hover {
     transform: translateY(-5px);
-    color: var(--green-accent);
+    color: rgba(32,178,170,1);
 }
 
 main > .work > a:before {
@@ -490,7 +489,7 @@ main > .work-detail > a > figure {
 }
 
 main > .work-detail > a > figure:hover {
-    border-color: var(--green-accent);
+    border-color: rgba(32,178,170,1);
 }
 
 main > .work-detail > a > figure:hover:before {
@@ -500,7 +499,7 @@ main > .work-detail > a > figure:hover:before {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: var(--dark-purple);
+    background-color: rgba(25,17,49,1);
     text-align: center;
     opacity: 0.7;
 }
@@ -513,7 +512,7 @@ main > .work-detail > a > figure:hover::after {
     left: 0;
     text-align: center;
     transform: translateY(-50%);
-    color: var(--green-accent);
+    color: rgba(32,178,170,1);
     font-size: 2em;
     font-weight: 300;
 }
@@ -525,12 +524,12 @@ main > .work-detail > a > figure:hover::after {
 
 .main-hdr > div > a:hover > h1, 
 .main-hdr > div > a:hover > h3 {
-    color: var(--green-accent);
+    color: rgba(32,178,170,1);
 }
 
 @keyframes fadeToPurple {
     to {
-        background-color: var(--dark-purple);
+        background-color: rgba(25,17,49,1);
     }
 }
 

@@ -10,7 +10,7 @@
     .max-width-container {
         padding: 0 4rem;
     }
-    .main-bg {
+    .cssfilters .main-bg {
         background: url(../img/bg-main-s-port.jpg);
         background-size: cover;
     }
@@ -55,13 +55,13 @@
         width: auto;
         float: none;
         padding: 0.5rem 3rem;
-        border-left: 1px solid var(--light-color-opaque);
+        border-left: 1px solid rgba(251,251,251,.1);
     }
     .main-hdr > div > nav li:nth-of-type(2) a {
         border: none;
     }
     .main-hdr > div > nav li:last-of-type a {
-        border-right: 1px solid var(--light-color-opaque);
+        border-right: 1px solid rgba(251,251,251,.1);
     }
     /* CV */
     .cv h2 {
@@ -100,7 +100,7 @@
     .max-width-container {
         max-width: 1045px;
     }
-    .main-bg {
+    .cssfilters .main-bg {
         background: url(../img/bg-main-xl.jpg);
         background-size: cover;
     }
