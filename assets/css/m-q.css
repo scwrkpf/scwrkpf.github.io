@@ -3,16 +3,15 @@
     body {
         padding-top: 8rem;
     }
+    main {
+        padding-bottom: 16rem;
+    }
     main,
     .max-width-container {
         max-width: 710px;
     }
     .max-width-container {
         padding: 0 4rem;
-    }
-    .cssfilters .main-bg {
-        background: url(../img/bg-main-s-port.jpg);
-        background-size: cover;
     }
     main > section {
         padding-top: 5rem;
@@ -55,34 +54,20 @@
         width: auto;
         float: none;
         padding: 0.5rem 3rem;
-        border-left: 1px solid rgba(251,251,251,.1);
-    }
-    .main-hdr > div > nav li:nth-of-type(2) a {
         border: none;
     }
-    .main-hdr > div > nav li:last-of-type a {
-        border-right: 1px solid rgba(251,251,251,.1);
+    .main-hdr > div > nav li:nth-of-type(2) a {
+        border-left: 1px solid #E6EAEA;
+        border-right: 1px solid #E6EAEA;
     }
-    /* CV */
-    .cv h2 {
-        font-size: 1.6rem;
+    /* INTRO */
+    .intro {
+        padding-top: 4rem;
+        padding-bottom: 5rem;
     }
-    .cv .timeline {
-        font-size: 1.4rem;
-    }    
-    .cv .timeline > * ~ * {
-        margin-top: 6rem;
-    }
-    .cv .timeline h3 {
-        font-size: 1.4rem;
-    }
-    .cv .timeline h4 {
-        font-size: 1.1rem;
-    }
-    
-        /* BIO */
-    .bio figure {
-        max-width: 400px;
+    .intro p {
+        font-size: 2.4rem;
+        line-height: 1.75em;
     }
     /* WORK */
     main > .work > a {
@@ -93,6 +78,29 @@
     main > .work > a:nth-of-type(2n + 2) {
         margin-left: 4rem;
     }    
+    /* FOOTER */
+    footer {
+        padding: 1.9rem 0;
+    }
+    footer nav {
+        float: right;
+        width: calc(100% - 21rem);
+        text-align: right;
+    } 
+    footer nav li {
+        display: inline;
+    }
+    footer nav a {
+        position: relative;
+        width: auto;
+        float: none;
+        padding: 0.5rem 3rem;
+        border: none;
+    }
+    footer nav li:nth-of-type(2) a {
+        border-left: 1px solid #E6EAEA;
+        border-right: 1px solid #E6EAEA;
+    }
 }
 
 @media only screen and (min-width: 1045px) {
@@ -100,20 +108,10 @@
     .max-width-container {
         max-width: 1045px;
     }
-    .cssfilters .main-bg {
-        background: url(../img/bg-main-xl.jpg);
-        background-size: cover;
-    }
-    /* BIO */
-    .bio figure {
-        float: left;
-        margin-right: 6rem;
-    }
-    .bio p:first-of-type {
-        padding-top: 1rem;
-    }
-    .bio ul {
-        padding-left: 46rem;
+    /* INTRO */
+    .intro p {
+        font-size: 3rem;
+        line-height: 1.5em;
     }
     /* WORK */
     main > .work > a {
@@ -126,18 +124,9 @@
     main > .work > a:nth-of-type(3n + 3) {
         margin-left: 4rem;
     }
-    /* WORK-DETAIL */
-    main > .work-detail > a > figure {
-        float: left;
-        width: calc(100% - (300px + 4rem));
+    /* ABOUT */
+    .about:first-of-type p {
+        font-size: 2.5rem;
+        font-weight: 600;
     }
-    main > .work-detail > aside {
-        float: left;
-        width: 300px;
-        margin-left: 4rem;
-    }
-    .work-detail .button.next {
-        float: left;
-        margin-left: 0.5rem;
-    }
-    }
+}
