@@ -28,19 +28,7 @@
         }
     }
 
-    function topFade(topFadeElems) {
-        for(i = 0; i < topFadeElems.length; i++) {
-            var distTop = topFadeElems[i].getBoundingClientRect().top;
-            topFadeElems[i].style.opacity = (distTop / 120) * 1;
-        }
-    }
-
     var viewportAnims = function (event) {
-        var topFadeElems = document.querySelectorAll('.top--fade--out');
-        if(topFadeElems.length) {
-            topFade(topFadeElems);
-        }
-        elementFromTop(document.querySelectorAll('.viewport-anim'),       'top--fade--out',       120, 'pixels'); // as top of element hits 120px off top of viewport
         elementFromTop(document.querySelectorAll('.viewport-anim'),        'bottom--fade--in',      100, 'percent'); // as top of element enters bottom of viewport         
     }
 
