@@ -101,31 +101,6 @@ img {
     clear: both;  
 }
 
-.button {
-    display: inline-block;
-    border: 1px solid #202121;
-    padding-right: 1.25em;
-    padding-left: 1.25em;
-}
-
-.button.pdf:before,
-.button.site:before {
-    content: 'PDF';
-    font-weight: 400;
-    border-right: 1px solid rgba(251,251,251,.1);
-    border-left: 1px solid rgba(251,251,251,.1);
-    padding: 0 0.3em;
-    margin-right: 1em;
-}
-
-.button.pdf:before {
-    content: 'PDF';
-}
-
-.button.site:before {
-    content: 'WEBSITE';
-}
-
 /************************************
 5. TEXT
 ************************************/
@@ -310,17 +285,8 @@ footer nav li:last-of-type a {
     transition: transform .7s ease;
 }
 
-.main-hdr > div > nav a:hover,
-.main-hdr > div > nav a.active {
-    color: #00a6fb;
-}
-
-.button {
-    transition: all .2s ease;
-}
-
-.button:hover {
-    border-color: #00a6fb;
+nav a:hover,
+nav a.active {
     color: #00a6fb;
 }
 
@@ -341,7 +307,7 @@ main > .work > a:hover {
 main > .work > a:before {
     content: '→';
     position: absolute;
-    bottom: 22px;
+    bottom: 20px;
     right: 20px;
     font-size: 2em;
     color: #00a6fb;
