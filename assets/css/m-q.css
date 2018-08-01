@@ -82,9 +82,17 @@
     footer {
         padding: 1.9rem 0;
     }
+    footer .max-width-container:before {
+        content: 'Want to know more?';
+        float: left;
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #00a6fb;
+        padding-top: 0.12em;
+    }
     footer nav {
         float: right;
-        width: calc(100% - 21rem);
+        width: calc(100% - 27rem);
         text-align: right;
     } 
     footer nav li {

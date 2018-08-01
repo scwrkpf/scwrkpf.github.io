@@ -312,7 +312,7 @@ footer nav li:last-of-type a {
 
 .main-hdr > div > nav a:hover,
 .main-hdr > div > nav a.active {
-    color: #49c5b6;
+    color: #00a6fb;
 }
 
 .button {
@@ -320,8 +320,8 @@ footer nav li:last-of-type a {
 }
 
 .button:hover {
-    border-color: #49c5b6;
-    color: #49c5b6;
+    border-color: #00a6fb;
+    color: #00a6fb;
 }
 
 main > .work > a {
@@ -333,13 +333,9 @@ main > .work > a > figure {
     transition: all .2s ease;
 }
 
-main > .work > a:hover > figure {
-    border-color: #49c5b6;
-}
-
 main > .work > a:hover {
     transform: translateY(-5px);
-    color: #49c5b6;
+    color: #00a6fb;
 }
 
 main > .work > a:before {
@@ -348,7 +344,7 @@ main > .work > a:before {
     bottom: 22px;
     right: 20px;
     font-size: 2em;
-    color: #49c5b6;
+    color: #00a6fb;
     z-index: 9;
     opacity: 0;
     transition: opacity .2s ease;
@@ -365,5 +361,5 @@ main > .work > a:hover:before {
 
 .main-hdr > div > a:hover > h1, 
 .main-hdr > div > a:hover > h3 {
-    color: #49c5b6;
+    color: #00a6fb;
 }
