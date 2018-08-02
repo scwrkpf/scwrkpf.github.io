@@ -256,8 +256,8 @@ p.fyi {
     font-size: 1.1rem;
     padding: 1rem 0;
     text-align: center;
-    color: #f4f7f6;
-    background-color: #00a6fb;
+    color: #f4f7f6 !important;
+    background-color: #00a6fb !important;
 }
 .graphic-cta a:before {
     position: absolute;
