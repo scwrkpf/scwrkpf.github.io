@@ -78,6 +78,11 @@
     main > .work > a:nth-of-type(2n + 2) {
         margin-left: 4rem;
     }    
+    /* GRAPHIC */
+    .graphic figure img {
+        width: auto;
+        max-width: 100%;
+    }
     /* FOOTER */
     footer {
         padding: 1.9rem 0;
