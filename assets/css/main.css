@@ -238,6 +238,38 @@ main > section ul > li ~ li {
 .work > a > figure > figcaption {
     padding: 2rem;
 }
+p.fyi {
+    display: block;
+    width: 100%;
+    padding-top: 3rem;
+    text-align: center;
+}
+/* GRAPHIC-CTA */
+.graphic-cta {
+    text-align: center;
+}
+.graphic-cta a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 295px;
+    font-size: 1.1rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: #f4f7f6;
+    background-color: #00a6fb;
+}
+.graphic-cta a:before {
+    position: absolute;
+    content: '→';
+    color: #202121;
+    font-size: 2.5em;
+    top: 50%;
+    line-height: 1;
+    right: 0;
+    transform: translate3d(0,-60%, 0);
+    z-index: -1;
+}
 /* ABOUT */
 .about p {
     font-size: 2rem;
@@ -328,4 +360,16 @@ main > .work > a:hover:before {
 .main-hdr > div > a:hover > h1, 
 .main-hdr > div > a:hover > h3 {
     color: #00a6fb;
+}
+
+.graphic-cta a:hover {
+    background: #202121;
+}
+
+.graphic-cta a:before {
+    transition: transform .2s ease;
+}
+
+.graphic-cta a:hover:before {
+    transform: translate3d(40px,-60%, 0);
 }
