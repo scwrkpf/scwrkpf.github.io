@@ -363,7 +363,7 @@ main > .work > a:hover:before {
 }
 
 .graphic-cta a:hover {
-    background: #202121;
+    background: #202121 !important;
 }
 
 .graphic-cta a:before {
