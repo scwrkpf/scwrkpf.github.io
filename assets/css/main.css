@@ -69,10 +69,6 @@ main > section > * ~ * {
     margin-top: 2rem;
 }
 
-img {
-    width: 100%;
-}
-
 /************************************
 4. GENERIC (re-usable)
 ************************************/
@@ -192,19 +188,6 @@ main > section ul > li ~ li {
     margin-bottom: 1.8rem;
 }
 
-.main-hdr > div > nav {
-    border-top: 1px solid #E6EAEA;
-}
-
-.main-hdr > div > nav a {
-    width: calc(100% / 3);
-    float: left;
-    border-right: 1px solid #E6EAEA;
-}
-
-.main-hdr > div > nav li:last-of-type a {
-    border-right: none;
-}
 /* INTRO */
 .intro {
     padding-bottom: 3.2rem;
@@ -215,60 +198,6 @@ main > section ul > li ~ li {
     font-size: 2rem;
     line-height: 2em;
     font-weight: 600;
-}
-/* WORK */
-.work > * ~ * {
-    margin-top: 4rem;
-}
-
-.work > a {
-    display: block;
-    font-size: unset;
-    line-height: unset;
-    padding-top: unset;
-    font-weight: unset;
-    letter-spacing: unset;
-    text-transform: unset;
-}
-
-.work > a > figure {
-    background: #fff;
-}
-
-.work > a > figure > figcaption {
-    padding: 2rem;
-}
-p.fyi {
-    display: block;
-    width: 100%;
-    padding-top: 3rem;
-    text-align: center;
-}
-/* GRAPHIC-CTA */
-.graphic-cta {
-    text-align: center;
-}
-.graphic-cta a {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    max-width: 295px;
-    font-size: 1.1rem;
-    padding: 1rem 0;
-    text-align: center;
-    color: #f4f7f6 !important;
-    background-color: #00a6fb !important;
-}
-.graphic-cta a:before {
-    position: absolute;
-    content: '→';
-    color: #202121;
-    font-size: 2.5em;
-    top: 50%;
-    line-height: 1;
-    right: 0;
-    transform: translate3d(0,-60%, 0);
-    z-index: -1;
 }
 /* ABOUT */
 .about p {
@@ -322,36 +251,6 @@ nav a.active {
     color: #00a6fb;
 }
 
-main > .work > a {
-    position: relative;
-    transition: transform .2s ease;
-}
-
-main > .work > a > figure {
-    transition: all .2s ease;
-}
-
-main > .work > a:hover {
-    transform: translateY(-5px);
-    color: #00a6fb;
-}
-
-main > .work > a:before {
-    content: '→';
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-size: 2em;
-    color: #00a6fb;
-    z-index: 9;
-    opacity: 0;
-    transition: opacity .2s ease;
-}
-
-main > .work > a:hover:before {
-    opacity: 1;
-}
-
 .main-hdr > div > a > h1, 
 .main-hdr > div > a > h3 {
     transition: color .2s ease;
@@ -360,16 +259,4 @@ main > .work > a:hover:before {
 .main-hdr > div > a:hover > h1, 
 .main-hdr > div > a:hover > h3 {
     color: #00a6fb;
-}
-
-.graphic-cta a:hover {
-    background: #202121 !important;
-}
-
-.graphic-cta a:before {
-    transition: transform .2s ease;
-}
-
-.graphic-cta a:hover:before {
-    transform: translate3d(40px,-60%, 0);
 }
